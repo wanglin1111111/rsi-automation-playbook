@@ -1,0 +1,42 @@
+{
+  "worklog_minutes": 2,
+  "tasks": [
+    {
+      "id": "TASK-1",
+      "current_al": 4,
+      "target_al": 3,
+      "verification": "intrinsic",
+      "generator": "claude",
+      "judge": "claude",
+      "irreversible_actions": ["delete_db"],
+      "monitoring": {
+        "pre_block": false,
+        "post_review_pct": 0,
+        "metrics": ["coverage"]
+      }
+    },
+    {
+      "id": "TASK-2",
+      "current_al": 4,
+      "target_al": 5,
+      "verification": "formal",
+      "generator": "claude",
+      "judge": "human",
+      "irreversible_actions": ["unknown_action"],
+      "monitoring": {
+        "pre_block": true,
+        "post_review_pct": 5,
+        "metrics": ["coverage", "review_latency", "escalation_rate"]
+      }
+    },
+    {
+      "id": "TASK-3",
+      "current_al": 2,
+      "target_al": 4,
+      "verification": "learned_judge",
+      "generator": "claude",
+      "judge": "claude",
+      "irreversible_actions": ["payment"]
+    }
+  ]
+}

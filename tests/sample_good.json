@@ -1,0 +1,33 @@
+{
+  "worklog_minutes": 10,
+  "tasks": [
+    {
+      "id": "TASK-1",
+      "current_al": 3,
+      "target_al": 4,
+      "verification": "execution",
+      "generator": "claude",
+      "judge": "test-suite",
+      "irreversible_actions": ["production_deploy"],
+      "monitoring": {
+        "pre_block": true,
+        "post_review_pct": 2,
+        "metrics": ["coverage", "review_latency", "escalation_rate"]
+      }
+    },
+    {
+      "id": "TASK-2",
+      "current_al": 2,
+      "target_al": 3,
+      "verification": "learned_judge",
+      "generator": "claude",
+      "judge": "human",
+      "irreversible_actions": [],
+      "monitoring": {
+        "pre_block": true,
+        "post_review_pct": 1,
+        "metrics": ["coverage", "review_latency", "escalation_rate"]
+      }
+    }
+  ]
+}
