@@ -15,5 +15,7 @@ jobs:
         run: python scripts/validate.py tests/sample_good.json
       - name: Bad sample must fail
         run: |
+          set +e
           python scripts/validate.py tests/sample_bad.json
-          test $? -eq 1
+          code=$?
+          test "$code" -eq 1
