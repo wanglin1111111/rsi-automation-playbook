@@ -30,6 +30,10 @@ RSI 自动化分级与治理技能：给任务打 AL0-AL5 分级、按验证层�
 ```bash
 python scripts/validate.py tests/sample_good.json   # 必须 exit 0
 python scripts/validate.py tests/sample_bad.json    # 必须 exit 1
+
+# 一行自验（正反向 + 退出码全覆盖，零依赖）
+python tests/test_validate.py
+# 或 python -m unittest discover -s tests
 ```
 
 ## 结构
